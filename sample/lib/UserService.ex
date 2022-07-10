@@ -1,9 +1,10 @@
 defmodule UserService do
   @spec exists(User.t()) :: boolean()
+  alias Sample.Repo
   def exists(user) do
-    # SELECT * FROM users WHERE name = user.name
-    # データがあればtrue, なけれなfalse
-
-    true
+    case Repo.one(from u in Users, where: u.name == ^user.name) do
+      nil -> false
+      _ -> true
+    end
   end
 end
