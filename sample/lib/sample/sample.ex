@@ -7,7 +7,7 @@ defmodule Sample.Application do
       Sample.Repo,
     ]
 
-    opts = [strategy: :one_for_one, name: Hogee.Supervisor]
+    opts = [strategy: :one_for_one, name: Sample.Supervisor]
     Supervisor.start_link(children, opts)
   end
 end

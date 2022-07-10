@@ -1,6 +1,6 @@
 defmodule TransportService do
-  def Transport(from, to, baggage) do
+  def transport(from, to, baggage) do
     shippedBaggage = from.ship(baggage)
-    to.Receive(shippedBaggage)
+    to.receive(shippedBaggage)
   end
 end

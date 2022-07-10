@@ -21,7 +21,7 @@ defmodule Sample do
   def createUser(userName) do
     user = User.new(userName)
 
-    if UserService.Exists(user) do
+    if UserService.exists(user) do
       raise "#{userName}は既に存在しています"
     end
 
