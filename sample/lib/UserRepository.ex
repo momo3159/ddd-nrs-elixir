@@ -1,4 +1,9 @@
 defmodule UserRepository do
+  """
+  UserとOrganizationのように，複数のオブジェクトが関わるときのレポジトリはどうなる？
+  """
+
+
   @behaviour IUserRepository
   ## TODO: Ecto.Schemaを通じて行うように変更
   @spec save(User.t())
